@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             gridsquare.style.width = "50px"; 
             gridsquare.style.height = "50px"; 
-            gridsquare.style.backgroundColor = "red";
+            //gridsquare.style.backgroundColor = "red";
             gridsquare.style.border = "10px";
             gridsquare.style.borderColor = "black";
 
@@ -24,7 +24,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
         grid.appendChild(row);
     }
-;
 
-    //grid.appendChild(gridsquare);
+    const mouseHover = document.getElementById("grid");
+    mouseHover.addEventListener("mouseover", (event) => {
+        event.target.style.backgroundColor = "black";
+
+        setTimeout(() => {
+            event.target.style.backgroundColor = "";
+        
+        }, 500);
+        },
+        false,
+    );
+
+    mouseHover.addEventListener(
+        "mouseover",
+        (event) => {
+            event.target.style.color = "orange";
+
+            setTimeout(() => {
+                event.target.style.color = "";
+
+            }, 500);
+        },
+        false,
+    );
+
 });
